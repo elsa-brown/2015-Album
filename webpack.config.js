@@ -1,6 +1,3 @@
-'use strict'
-
-const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
@@ -23,7 +20,16 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   }
 };
+
