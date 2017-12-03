@@ -37,7 +37,7 @@ a {
 
 #player-bg {
   background-color: rgb(10,10,10);
- /* background-color: purple;*/
+ 	border: 1px solid rgb(15,15,15);
   height: 32px;
   width: 252px;
   display: flex;
@@ -46,29 +46,54 @@ a {
 }
 
 #play-button {
-	height: 12px;
+	height: 14px;
+	width: 12.2px;
 	transform: translate(-10px);
 	align-self: center;
 }
 
-#progress-bar {
-	background-color: rgb(50,50,50);
+#progress-bar-default {
+	background-color: rgb(30,30,30);
 	height: 6px;
-	width: 164px;
+	width: 160px;
+	border: 1px solid rgb(15,15,15);
 	border-radius: 1px;
 	align-self: center;
 	transform: translate(-3px);
 }
 
+#progress-bar {
+	background-color: rgb(30,30,30);
+	height: 6px;
+	width: 60px;
+	align-self: center;
+	border-radius: 1px;
+}
+
 #timestamp {
 	font-size: 0.7rem;
+	width: 22px;
 	align-self: center;
 	transform: translate(4.5px);
 }
 
 #volume {
-	height: 13px;
+	height: 15px;
 	align-self: center;
 	transform: translate(11px);
+}
+
+#mute {
+	height: 15px;
+	align-self: center;
+	transform: translate(-8px);
+}
+
+.show {
+	visibility: visible;
+}
+
+.hide {
+	visibility: hidden;
 }
 
