@@ -9,11 +9,25 @@ export default class Home extends Component {
 		super()
 		this.state = {
 			ggg: true,
-			mySongII: true,
+			MySongII: true,
 			bigsky: true,
 			station: true,
 			clubmix: true
 		}
+
+		this.handleClick = this.handleClick.bind(this)
+	}
+
+	handleClick(evt) {
+		console.log('evt.target: ', evt.target.innerHTML)
+		let nextState = function() {
+			let result = {};
+			let song = evt.target.innerHTML === 'My Song II' ? 'MySongII' : evt.target.innerHTML;
+			result[song] = false;
+			return result
+		}.bind(evt)()
+		this.setState(nextState)
+		console.log('State: ', this.state)
 	}
 
 	render() {
@@ -21,7 +35,7 @@ export default class Home extends Component {
 		<ol>
 			{songs.map((song, i) =>
 				<Link key={i} to={song.url}>
-					<li source={song.src}><span className="title">{song.name}</span></li>
+					<li onClick={this.handleClick}><span className="title">{song.name}</span></li>
 				</Link>
 			)}
 		</ol>

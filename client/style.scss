@@ -1,9 +1,16 @@
-body {
+@import 'normalize';
+
+html, body {
 	background-color: black;
 	color: white;
 	font-family: sans-serif;
 	padding: 20px;
   line-height: 1.25rem;
+  height: 100vh;
+}
+
+#app {
+	height: 100vh;
 }
 
 ul {
@@ -20,3 +27,48 @@ a {
 		color: black;
 	}
 }
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+#player-bg {
+  background-color: rgb(10,10,10);
+ /* background-color: purple;*/
+  height: 32px;
+  width: 252px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#play-button {
+	height: 12px;
+	transform: translate(-10px);
+	align-self: center;
+}
+
+#progress-bar {
+	background-color: rgb(50,50,50);
+	height: 6px;
+	width: 164px;
+	border-radius: 1px;
+	align-self: center;
+	transform: translate(-3px);
+}
+
+#timestamp {
+	font-size: 0.7rem;
+	align-self: center;
+	transform: translate(4.5px);
+}
+
+#volume {
+	height: 13px;
+	align-self: center;
+	transform: translate(11px);
+}
+
